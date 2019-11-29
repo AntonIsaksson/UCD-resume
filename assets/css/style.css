@@ -64,3 +64,61 @@ header {
     margin-bottom: 90px;
     color: #ffffff;
 }
+
+/*-----------------------Navbar--------------------------*/
+
+/*---Closing menu gaps */
+.list-inline-item:not(:last-child) {
+    margin: 0;
+}
+
+.menucontainer {
+    font-size: 0;
+}
+
+#nav {
+    margin: 0;
+}
+
+#nav li {
+    font-size: 14px;
+    padding: 0;
+}
+
+/*--Styling menuitems--*/
+.menuitem {
+    height: 120px;
+    text-align: center;
+    padding: 0;
+}
+
+.menuitem a {          /*--<--targeting the link--*/
+    width: 100%;       /*--<--makes whole menu-item-area clickable--*/
+    text-decoration: none;
+    color: #ffffff;
+    height: 120px;
+}
+
+.menuitem a i {          /*--<--targeting the icons--*/
+    padding-top: 22px;
+    display: block;      /*--<--makes the icons appear on top of text (default is 'inline')--*/
+    color: #fafafa;
+    font-size: 26px;
+}
+
+.menuitem span {         /*--targeting the link-text--(why can't I put these rules in the 'menuitem a' rule instead??)*/
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/*--Styling the Hover.css (from 'cdnjs.com')--*/
+.hvr-sweep-to-bottom::before {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 120px;
+}
