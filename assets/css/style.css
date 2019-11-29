@@ -23,7 +23,27 @@
     background-color: #525252;
 }
 
-/*---------------------------------------------Header (whole) */
+/*---------------------------------------------Special paddings/margins/text */
+
+h1,h2,h3,h4 {
+    margin: 0;
+}
+
+.uppercase {                            /*<--used in footer*/
+    text-transform: uppercase;
+}
+
+.general-sub {                          /*<--used in footer*/
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+    color: #fafafa;
+}
+
+.inline-block {                         /*<--used in footer*/
+    display: inline-block;
+}
+
+/*---------------------------------------------HEADER */
 
 header {
     margin: 0;
@@ -65,7 +85,7 @@ header {
     color: #ffffff;
 }
 
-/*-----------------------Navbar--------------------------*/
+/*-------------------Navbar----------------------*/
 
 /*---Closing menu gaps */
 .list-inline-item:not(:last-child) {
@@ -92,21 +112,21 @@ header {
     padding: 0;
 }
 
-.menuitem a {          /*--<--targeting the link--*/
-    width: 100%;       /*--<--makes whole menu-item-area clickable--*/
+.menuitem a {          /*<--targeting the link*/
+    width: 100%;       /*<--makes whole menu-item-area clickable*/
     text-decoration: none;
     color: #ffffff;
     height: 120px;
 }
 
-.menuitem a i {          /*--<--targeting the icons--*/
+.menuitem a i {          /*<--targeting the icons*/
     padding-top: 22px;
-    display: block;      /*--<--makes the icons appear on top of text (default is 'inline')--*/
+    display: block;      /*<--makes the icons appear on top of text (default is 'inline')*/
     color: #fafafa;
     font-size: 26px;
 }
 
-.menuitem span {         /*--targeting the link-text--(why can't I put these rules in the 'menuitem a' rule instead??)*/
+.menuitem span {         /*<--targeting the link-text--(why can't I put these rules in the 'menuitem a' rule instead??)*/
     display: block;
     width: 100%;
     padding-top: 5px;
@@ -121,4 +141,57 @@ header {
 .hvr-sweep-to-bottom::before {
     background-color: rgba(0, 0, 0, 0.2);
     height: 120px;
+}
+
+
+/*---------------------------------------------FOOTER */
+
+footer {
+    background-color: #525252;
+    color: #fafafa;
+    min-height: 120px;
+    margin: 0;
+}
+
+#footer-details {               /*<--targets the whole footer*/
+    padding: 20px;
+}
+
+.cv-pdf i {                     /*<--targeting the 'download pdf' icon*/
+    font-size: 18px;
+    color: #fafafa;
+    text-align: center;
+    padding-left: 5px;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.cv-pdf i:hover {               /*<--targeting the 'download pdf' icon (hover combined with transition)*/
+    color: #e84610;
+}
+
+.social-links {
+    padding-bottom: 15px;
+}
+
+.social-links li a i {          /*<--targeting the 'social' icons*/
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;         /*<--makes the icons into circles (only works when width & height=same(square))*/
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;          /*<--same transition as ".cv-pdf i"*/
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {       /*<--targeting the 'social' icons (hover combined with transition)*/
+    background: #e84610;
 }
